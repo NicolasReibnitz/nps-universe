@@ -1,0 +1,49 @@
+{
+	"name": "@das.laboratory/nps-i",
+	"version": "3.0.0",
+	"description": "Interactive mode for nps",
+	"license": "MIT",
+	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (https://daslaboratory.com/)",
+	"bin": {
+		"nps-i": "dist/index.mjs",
+		"ni": "dist/index.mjs"
+	},
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --format cjs,esm --dts --clean",
+		"start": "node dist/index.mjs",
+		"watch": "npm run build -- --watch src"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"nps",
+		"npm-package-scripts",
+		"npm-scripts",
+		"interactive",
+		"cli",
+		"menu",
+		"nps-i"
+	],
+	"dependencies": {
+		"@das.laboratory/nps-plus": "*",
+		"@das.laboratory/nps-utils": "*",
+		"@inquirer/prompts": "^7.2.1",
+		"execa": "^1.0.0",
+		"fuzzy": "0.1.3",
+		"inquirer": "^9.3.7",
+		"inquirer-autocomplete-prompt": "^3.0.1",
+		"right-pad": "1.0.1"
+	},
+	"devDependencies": {}
+}

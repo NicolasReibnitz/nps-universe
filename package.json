@@ -1,0 +1,38 @@
+{
+	"name": "nps-universe",
+	"version": "1.0.0",
+	"description": "Monorepo for nps related packages",
+	"homepage": "https://github.com/NicolasReibnitz/nps-universe#readme",
+	"bugs": {
+		"url": "https://github.com/NicolasReibnitz/nps-universe/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NicolasReibnitz/nps-universe.git"
+	},
+	"license": "MIT",
+	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (https://daslaboratory.com/)",
+	"type": "commonjs",
+	"main": "index.js",
+	"scripts": {
+		"bump:major": "npm version major -f -m \"[v%s] $npm_config_message\"",
+		"bump:minor": "npm version minor -f -m \"[v%s] $npm_config_message\"",
+		"bump:patch": "npm version patch -f -m \"[v%s] $npm_config_message\"",
+		"postversion": "git push && git push --tags && npm publish",
+		"prepublishOnly": "npm run build",
+		"preversion": "git add .",
+		"version": "git add ."
+	},
+	"private": true,
+	"workspaces": [
+		"nps-i",
+		"nps-plus",
+		"nps-utils"
+	],
+	"devDependencies": {
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3",
+		"@das.laboratory/prettier-config-interactive": "latest",
+		"@das.laboratory/eslint-config-interactive-ts": "latest"
+	}
+}

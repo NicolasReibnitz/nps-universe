@@ -1,0 +1,56 @@
+{
+	"name": "@das.laboratory/nps-plus",
+	"version": "3.0.0",
+	"description": "All the benefits of nps plus the power of functions",
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --format esm,cjs --dts --clean",
+		"start": "node dist/bin/index.mjs"
+	},
+	"bin": {
+		"nps": "dist/bin/index.mjs"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"nps",
+		"npm-package-scripts",
+		"npm-scripts",
+		"cli",
+		"menu",
+		"nps-plus"
+	],
+	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (https://daslaboratory.com/)",
+	"license": "MIT",
+	"dependencies": {
+		"arrify": "^1.0.1",
+		"chalk": "^2.0.1",
+		"common-tags": "^1.4.0",
+		"find-up": "^2.1.0",
+		"js-yaml": "3.13.1",
+		"lodash": "4.17.20",
+		"manage-path": "^2.0.0",
+		"prefix-matches": "^1.0.1",
+		"readline-sync": "^1.4.7",
+		"spawn-command-with-kill": "^1.0.0",
+		"type-detect": "^4.0.3",
+		"yargs": "14.2.0"
+	},
+	"devDependencies": {
+		"all-contributors-cli": "6.19.0",
+		"cross-env": "^5.0.1",
+		"husky": "0.14.3",
+		"@das.laboratory/nps-utils": "*",
+		"opt-cli": "1.6.0"
+	}
+}

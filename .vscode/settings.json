@@ -1,0 +1,17 @@
+{
+	"zencoder.enableRepoIndexing": true,
+	"cSpell.words": [
+		"applypatchmsg",
+		"casify",
+		"Casify",
+		"commitmsg",
+		"preautogc",
+		"preparecommitmsg",
+		"prerebase",
+		"pushtocheckout",
+		"esnext",
+		"npmrs",
+		"npsrc",
+		"siddharthkp"
+	]
+}
